@@ -49,6 +49,7 @@ dev_dependencies:
     sdk: flutter
   change_app_package_name: ^1.1.0
   flutter_lints: ^2.0.0
+  flutter_launcher_icons: "^0.11.0"
 
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec
@@ -88,6 +89,18 @@ flutter:
   #       - asset: fonts/TrajanPro.ttf
   #       - asset: fonts/TrajanPro_Bold.ttf
   #         weight: 700
+
+fonts:
+    - family: WorkSans
+      fonts:
+        - asset: fonts/Work_Sans/WorkSans-Regular.ttf
+        - asset: fonts/Work_Sans/WorkSans-SemiBold.ttf
+          weight: 600
+        - asset: fonts/Work_Sans/WorkSans-Bold.ttf
+          weight: 700
+        - asset: fonts/Work_Sans/WorkSans-Italic.ttf
+          style: italic
+
   #
   # For details regarding fonts from package dependencies,
   # see https://flutter.dev/custom-fonts/#from-packages
