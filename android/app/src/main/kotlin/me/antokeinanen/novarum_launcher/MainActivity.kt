@@ -1,4 +1,4 @@
-package com.example.novarum_launcher
+package me.antokeinanen.novarum_launcher
 
 import io.flutter.embedding.android.FlutterActivity
 
