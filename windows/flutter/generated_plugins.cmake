@@ -5,6 +5,7 @@
 list(APPEND FLUTTER_PLUGIN_LIST
   battery_plus
   dynamic_color
+  permission_handler_windows
   url_launcher_windows
 )
 

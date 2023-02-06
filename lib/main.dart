@@ -6,6 +6,7 @@ import 'package:material_you_colours/material_you_colours.dart';
 import 'package:novarum_launcher/pages/apps.dart';
 import 'package:novarum_launcher/pages/home.dart';
 import 'package:novarum_launcher/pages/news.dart';
+import 'package:permission_handler/permission_handler.dart';
 import 'util/device_data.dart';
 
 void main() {
@@ -59,6 +60,16 @@ class _MainState extends State<Main> with TickerProviderStateMixin {
 
   @override
   Widget build(BuildContext context) {
+    Permission.storage.request().then((status) {
+      if (status.isGranted) {
+        return const AlertDialog(
+          title: Text("Oikeus vaatimus!"),
+          content: Text(
+              "Toimiakseen oikein tämä sovellus tarvitsee oikeuden käyttää tiedostojasi."),
+        );
+      }
+    });
+
     final List<Widget> allPages = [News(), Home(), Apps()];
 
     _tabController = TabController(
